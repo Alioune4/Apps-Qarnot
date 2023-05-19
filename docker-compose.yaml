@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    ports:
+      - '4000:5432' 
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=qarnot
+      - POSTGRES_PASSWORD=testqarnot
+      - POSTGRES_DB=appareils
+
+volumes:
+  pgdata:
